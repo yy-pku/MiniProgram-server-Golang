@@ -3,9 +3,10 @@ package service
 import (
 	"Miniprogram-server-Golang/model"
 	"Miniprogram-server-Golang/serializer"
+	"os"
+
 	"github.com/gin-gonic/gin"
 	"github.com/medivhzhan/weapp/v2"
-	"os"
 )
 
 // UserOpenIDService 获取用户token服务
@@ -47,11 +48,3 @@ func (service *UserOpenIDService) GetCode(c *gin.Context) serializer.Response {
 
 	return serializer.BuildStatusResponse(info)
 }
-
-
-
-
-
-
-
-
